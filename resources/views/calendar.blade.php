@@ -28,8 +28,19 @@
                 left: 'prev,next,today',
                 center: 'title',
                 right: 'month,agendaWeek,agendaDay'
-            }
-
+            },
+            events:[
+                {
+                    title: 'Exàmen 1',
+                    start: '2017-04-18'
+                },
+                {
+                    title: 'Exàmen 2',
+                    start: '2017-04-19T11:30:00',
+                    end: '2017-04-19T12:30:00',
+                    allDay: false
+                },
+            ]
         })
     });
 </script>

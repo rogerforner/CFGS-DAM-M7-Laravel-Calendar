@@ -33,8 +33,11 @@ Menu::macro('sidebar', function () {
 
         ->add(Menu::adminlteSeparator('ACTIVITIES'))
         #adminlte_menu
-        ->add(Link::toUrl('calendarlte', '<i class="fa fa-calendar-check-o"></i><span>CalendarLTE</span>'))
-        ->add(Link::toUrl('calendar', '<i class="fa fa-calendar"></i><span>Calendar</span>'))
+        ->add(Menu::new()->prepend('<a href="#"><i class="fa fa-calendar"></i><span>Calendar</span> <i class="fa fa-angle-left pull-right"></i></a>')
+            ->addParentClass('treeview')
+            ->add(Link::toUrl('calendarlte', '<i class="fa fa-link"></i><span>CalendarLTE</span>'))->addClass('treeview-menu')
+            ->add(Link::toUrl('calendar', '<i class="fa fa-link"></i><span>Calendar</span>'))
+        )
 
         ->add(Menu::adminlteSeparator('EXTERNAL LINKS'))
         ->add(Menu::new()->prepend('<a href="#"><i class="fa fa-wikipedia-w"></i><span>Acacha</span> <i class="fa fa-angle-left pull-right"></i></a>')

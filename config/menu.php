@@ -33,7 +33,8 @@ Menu::macro('sidebar', function () {
 
         ->add(Menu::adminlteSeparator('ACTIVITIES'))
         #adminlte_menu
-        ->add(Link::toUrl('/calendar', '<i class="fa fa-calendar"></i><span>Calendar</span>'))
+        ->add(Link::toUrl('calendarlte', '<i class="fa fa-calendar-check-o"></i><span>CalendarLTE</span>'))
+        ->add(Link::toUrl('calendar', '<i class="fa fa-calendar"></i><span>Calendar</span>'))
 
         ->add(Menu::adminlteSeparator('EXTERNAL LINKS'))
         ->add(Menu::new()->prepend('<a href="#"><i class="fa fa-wikipedia-w"></i><span>Acacha</span> <i class="fa fa-angle-left pull-right"></i></a>')
@@ -42,6 +43,6 @@ Menu::macro('sidebar', function () {
             ->url('acacha.org/mediawiki/Usuari:Rogerforne', 'Roger Forner Fabre')
             ->url('http://acacha.org/mediawiki/2DAM_2016-17#.WO4xQt-YFqM', '2DAM 2016-17')
         )
-        
+
         ->setActiveFromRequest();
 });

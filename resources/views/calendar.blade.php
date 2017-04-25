@@ -19,6 +19,15 @@
             font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
         }
 
+        #home {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        #home a {
+            color: red;
+            text-decoration: none;
+        }
+
         #wrap {
             width: 1100px;
             margin: 0 auto;
@@ -63,6 +72,11 @@
     </style>
 </head>
 <body>
+<div id="home">
+    <a href="<?php echo url('/home'); ?>">
+        <h1>Return to home</h1>
+    </a>
+</div>
 
 <div id='external-events'>
     <h4>Draggable Events</h4>
